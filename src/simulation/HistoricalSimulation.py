@@ -36,7 +36,6 @@ class HistoricalSimulation:
 
     async def stop(self):
         """Stop the background task manager."""
-        print("FINE")
         if not self.running:
             return
 
@@ -64,13 +63,15 @@ class HistoricalSimulation:
                     await self.stop()
                     break
 
-                # Check if household devices should be switched
                 self.household_simulator.tick(self.current_timestamp)
-                print("Ciao")
+
                 active_nodes = repository.get_active_nodes()
+                shutdown_nodes = self.household_simulator.get_nodes_to_shutdown()
+
                 if active_nodes:
                     print(f"Processing {len(active_nodes)} active nodes at timestamp: {self.current_timestamp}")
                     await self._send_requests_for_nodes(active_nodes)
+                    await self._send_requests_for_nodes(shutdown_nodes)
                 else:
                     print(f"No active nodes to process at timestamp: {self.current_timestamp}")
 
@@ -128,7 +129,7 @@ class HistoricalSimulation:
 
             influxDB.write_node_request(json.dumps(payload))
 
-            print(f"Request sent successfully for node '{node.name}' to {node.endpoint}")
+            print(f"Request sent successfully for node '{node.name}' to {node.endpoint} with {node.real_time_consumption}")
             return True
 
         except httpx.TimeoutException:
