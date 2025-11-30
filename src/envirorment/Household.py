@@ -1,8 +1,11 @@
 import random
 from datetime import datetime, timedelta
 
+from core.model.NodeStatus import NodeStatus
+
+
 class Household:
-    def __init__(self, repository, switch_interval_minutes=15):
+    def __init__(self, repository, switch_interval_minutes=5):
         """
         Initialize the household simulator.
 
@@ -22,6 +25,9 @@ class Household:
         # Time boundaries
         self.day_start_hour = 6
         self.night_start_hour = 21
+
+
+        self.nodes_to_shutdown = []
 
     def is_daytime(self, current_timestamp: datetime) -> bool:
         """Check if current time is during daytime (6 AM to 9 PM)."""
@@ -62,19 +68,34 @@ class Household:
         num_to_switch = min(self.get_num_devices_to_switch(current_timestamp), len(all_nodes))
         selected_nodes = random.sample(all_nodes, num_to_switch)
 
+
         self.cycle += 1
         print(f"\n[{current_timestamp}] === Cycle {self.cycle} ===")
         print(f"[{current_timestamp}] Switching {num_to_switch} random devices:")
 
+        nodes_to_shutdown = []
+
         for node in selected_nodes:
-            # Switch the node using repository method
+            if node.status == NodeStatus.ON:
+                copia_nodo = node
+                copia_nodo.real_time_consumption = 0
+                nodes_to_shutdown.append(copia_nodo)
             try:
                 self.repository.switch_node(node.id)
-                print("done!")
             except Exception as e:
                 print(f"[{current_timestamp}] - Failed to switch {node.name}: {e}")
+
+        self.nodes_to_shutdown = nodes_to_shutdown
+
 
     def tick(self, current_timestamp: datetime):
         """Called on each simulation tick to check if devices should be switched."""
         if self.should_switch_devices(current_timestamp):
             self.switch_random_devices(current_timestamp)
+
+    def get_nodes_to_shutdown(self):
+        nodes_to_shutdown = self.nodes_to_shutdown.copy()
+
+        self.nodes_to_shutdown = []
+
+        return nodes_to_shutdown
