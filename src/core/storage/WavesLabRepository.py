@@ -67,7 +67,7 @@ class WavesLabRepository:
                 if isinstance(node_dict.get("status"), str):
                     node_dict["status"] = node_dict["status"].lower()
                 if isinstance(node_dict.get("node_type"), str):
-                    node_dict["node_type"] = node_dict["node_type"].lower()
+                    node_dict["node_type"] = node_dict["node_type"]
 
                 node = WaveNode(**node_dict)
                 nodes[node.id] = node
