@@ -5,7 +5,7 @@
     "node_type": "ELECTRICITY",
     "status": "OFF",
     "real_time_consumption": 0.4,
-    "endpoint": "http://localhost:3002/api/internal/measurements?smart_furniture_hookup_id=e1c5a461-09ff-47d2-a519-c8371a9a6c6a",
+    "endpoint": "",
     "assigned_user": null
   },
   {
@@ -14,7 +14,7 @@
     "node_type": "ELECTRICITY",
     "status": "ON",
     "real_time_consumption": 1.5,
-    "endpoint": "http://localhost:3002/api/internal/measurements?smart_furniture_hookup_id=20fd9993-3f03-4854-9e71-94dbc94fedcb",
+    "endpoint": "",
     "assigned_user": null
   },
   {
@@ -23,7 +23,7 @@
     "node_type": "ELECTRICITY",
     "status": "ON",
     "real_time_consumption": 1.0,
-    "endpoint": "http://localhost:3002/api/internal/measurements?smart_furniture_hookup_id=260eeadb-ecda-43ef-9450-df7b2622da2a",
+    "endpoint": "",
     "assigned_user": null
   },
   {
@@ -32,7 +32,7 @@
     "node_type": "ELECTRICITY",
     "status": "ON",
     "real_time_consumption": 1.6,
-    "endpoint": "http://localhost:3002/api/internal/measurements?smart_furniture_hookup_id=e5bd7657-1512-4af9-8844-089a677bd0b5",
+    "endpoint": "",
     "assigned_user": null
   },
   {
@@ -41,7 +41,7 @@
     "node_type": "ELECTRICITY",
     "status": "ON",
     "real_time_consumption": 1.2,
-    "endpoint": "http://localhost:3002/api/internal/measurements?smart_furniture_hookup_id=c3e5a262-8445-4da4-809a-dc94f3ed279a",
+    "endpoint": "",
     "assigned_user": null
   },
   {
@@ -50,7 +50,7 @@
     "node_type": "GAS",
     "status": "ON",
     "real_time_consumption": 0.6,
-    "endpoint": "http://localhost:3002/api/internal/measurements?smart_furniture_hookup_id=1e10ce3b-554c-44a4-be58-74bad1ab0aa5",
+    "endpoint": "",
     "assigned_user": null
   },
   {
@@ -59,7 +59,7 @@
     "node_type": "GAS",
     "status": "OFF",
     "real_time_consumption": 0.35,
-    "endpoint": "http://localhost:3002/api/internal/measurements?smart_furniture_hookup_id=13928114-a09f-4bb3-995c-b74b4362b472",
+    "endpoint": "",
     "assigned_user": null
   },
   {
@@ -68,7 +68,7 @@
     "node_type": "GAS",
     "status": "ON",
     "real_time_consumption": 1.2,
-    "endpoint": "http://localhost:3002/api/internal/measurements?smart_furniture_hookup_id=4194f373-1b16-43d7-95e5-fe8e5eee3dd4",
+    "endpoint": "",
     "assigned_user": null
   },
   {
@@ -77,7 +77,7 @@
     "node_type": "GAS",
     "status": "ON",
     "real_time_consumption": 0.8,
-    "endpoint": "http://localhost:3002/api/internal/measurements?smart_furniture_hookup_id=8f7148bf-a423-47c5-9aab-71432c31a44c",
+    "endpoint": "",
     "assigned_user": null
   },
   {
@@ -86,7 +86,7 @@
     "node_type": "GAS",
     "status": "ON",
     "real_time_consumption": 1.5,
-    "endpoint": "http://localhost:3002/api/internal/measurements?smart_furniture_hookup_id=ceddce3d-5f53-4c97-a4a5-150c3b08561e",
+    "endpoint": "",
     "assigned_user": null
   },
   {
@@ -95,7 +95,7 @@
     "node_type": "WATER",
     "status": "OFF",
     "real_time_consumption": 0.5,
-    "endpoint": "http://localhost:3002/api/internal/measurements?smart_furniture_hookup_id=0d2185f0-2c09-4d1f-981a-651735977d01",
+    "endpoint": "",
     "assigned_user": null
   },
   {
@@ -104,7 +104,7 @@
     "node_type": "WATER",
     "status": "OFF",
     "real_time_consumption": 1.7,
-    "endpoint": "http://localhost:3002/api/internal/measurements?smart_furniture_hookup_id=35833630-68c9-418c-8449-5ec60af34488",
+    "endpoint": "",
     "assigned_user": null
   },
   {
@@ -113,7 +113,7 @@
     "node_type": "WATER",
     "status": "ON",
     "real_time_consumption": 2.4,
-    "endpoint": "http://localhost:3002/api/internal/measurements?smart_furniture_hookup_id=c6ee87bf-379e-4d76-8cd4-29304854c28e",
+    "endpoint": "",
     "assigned_user": null
   },
   {
@@ -122,7 +122,7 @@
     "node_type": "WATER",
     "status": "ON",
     "real_time_consumption": 0.5,
-    "endpoint": "http://localhost:3002/api/internal/measurements?smart_furniture_hookup_id=87086d4c-f7f1-4a40-ae0d-681b6ec3a542",
+    "endpoint": "",
     "assigned_user": null
   },
   {
@@ -131,7 +131,7 @@
     "node_type": "WATER",
     "status": "OFF",
     "real_time_consumption": 1.5,
-    "endpoint": "http://localhost:3002/api/internal/measurements?smart_furniture_hookup_id=8d42ab0a-43a4-4b41-be60-082bbfb35783",
+    "endpoint": "",
     "assigned_user": null
   }
 ]
