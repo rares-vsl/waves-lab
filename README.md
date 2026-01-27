@@ -63,27 +63,9 @@ them with users.
 * **Output Format:** `[Endpoint] [Type - Consumption] [ID] [Status] - [Name]`
 
 
-* **`waveslab info_active`**
+* **`waveslab info --active`**
 * The same detailed view as `info`, but filtered to show only nodes that are currently **running**.
-
-
-
-#### **Utility-Specific Info**
-
-These commands filter active nodes by their specific `NodeType`:
-
-| Command | Utility Filter |
-| --- | --- |
-| `waveslab info_e` | **Electricity** nodes only |
-| `waveslab info_g` | **Gas** nodes only |
-| `waveslab info_w` | **Water** nodes only |
-
-#### **User Management**
-
-* **`waveslab users`**
-* Lists all **VirtualUsers** currently registered in the system.
-* Useful for verifying usernames before associating them with a node via the `start` command.
-
+* 
 ### Server & API
 
 The environment includes a server that exposes a simple REST API:
